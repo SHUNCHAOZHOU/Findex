@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Findex -- 6 symbols</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<style>
+*{box-sizing:border-box;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+margin:0;padding:32px;background:#f5f6f8;color:#1a1a1a;}
+.wrap{max-width:1240px;margin:0 auto;}
+a{color:#1f77b4;text-decoration:none;} a:hover{text-decoration:underline;}
+.crumb{font-size:12px;color:#888;margin-bottom:10px;}
+h1{font-size:23px;margin:0 0 5px;}
+h2{font-size:16px;margin:0 0 14px;}
+.sub{color:#666;font-size:13px;margin-bottom:14px;}
+.live{display:inline-block;padding:3px 10px;border-radius:11px;background:#e8f5e9;
+color:#1b5e20;font-size:11px;font-weight:700;letter-spacing:.5px;vertical-align:middle;
+margin-left:8px;}
+.live::before{content:'';display:inline-block;width:7px;height:7px;border-radius:50%;
+background:#2e7d32;margin-right:6px;vertical-align:middle;}
+.card{background:#fff;border-radius:10px;padding:20px;margin-bottom:24px;
+box-shadow:0 1px 3px rgba(0,0,0,.08);}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+.kpi{background:#fafbfc;border:1px solid #e8eaed;border-radius:8px;padding:14px;}
+.kpi .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:#777;}
+.kpi .val{font-size:21px;font-weight:600;margin-top:5px;font-variant-numeric:tabular-nums;}
+.pos{color:#0a8f3c;} .neg{color:#c62828;}
+img{width:100%;border-radius:8px;display:block;}
+table{width:100%;border-collapse:collapse;font-size:13px;}
+th{text-align:left;padding:10px 8px;border-bottom:2px solid #e8eaed;font-size:11px;
+text-transform:uppercase;letter-spacing:.4px;color:#666;background:#fff;}
+td{padding:11px 8px;border-bottom:1px solid #f0f1f3;vertical-align:top;}
+tbody tr:hover{background:#fafbfc;}
+.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;}
+.tag{display:inline-block;padding:2px 9px;border-radius:11px;font-size:11px;font-weight:600;}
+.t-buy{background:#e8f5e9;color:#2e7d32;} .t-sell{background:#fdecea;color:#c62828;}
+.t-hold{background:#f1f3f4;color:#5f6368;}
+.reason{color:#444;line-height:1.55;max-width:520px;}
+.warn{background:#fff8e1;border-left:3px solid #f9a825;padding:12px 16px;
+border-radius:6px;font-size:13px;margin-bottom:20px;line-height:1.5;}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px;}
+input[type=search]{flex:1;min-width:220px;padding:9px 12px;border:1px solid #d5d8dc;
+border-radius:7px;font-size:13px;}
+button{padding:8px 14px;border:1px solid #d5d8dc;background:#fff;border-radius:7px;
+cursor:pointer;font-size:12px;}
+button.on{background:#1f77b4;color:#fff;border-color:#1f77b4;}
+.rank{display:flex;align-items:center;gap:9px;}
+.dot{width:11px;height:11px;border-radius:50%;flex:none;}
+.agent-name{font-weight:600;}
+.agent-meta{font-size:11px;color:#888;}
+.detail-link{font-size:12px;white-space:nowrap;}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:16px;}
+.mini{border:1px solid #e8eaed;border-radius:9px;padding:16px;background:#fafbfc;}
+.mini h3{margin:0 0 4px;font-size:14px;}
+.mini .big{font-size:25px;font-weight:600;font-variant-numeric:tabular-nums;margin:7px 0;}
+.mini dl{margin:10px 0 0;font-size:12px;color:#555;display:grid;
+grid-template-columns:auto auto;gap:4px 12px;}
+.mini dt{color:#888;} .mini dd{margin:0;text-align:right;font-variant-numeric:tabular-nums;}
+.foot{color:#999;font-size:11px;text-align:center;margin-top:8px;}
+.srcline{font-size:12px;color:#666;margin:-6px 0 16px;}
+
+/* lab branding: logo sits beside the page title, and repeats in the footer */
+.head{display:flex;align-items:flex-start;gap:16px;margin-bottom:14px;
+flex-wrap:wrap;}
+.head-txt{flex:1;min-width:260px;} .head-txt h1{margin-bottom:5px;}
+.head-txt .sub{margin-bottom:0;}
+.brand{flex:none;display:block;}
+.brand img{width:auto;height:44px;border-radius:0;}
+.foot .brand-foot{display:inline-flex;align-items:center;gap:7px;color:#999;}
+.foot .brand-foot img{width:auto;height:22px;border-radius:0;opacity:.75;}
+@media (max-width:620px){.brand img{height:36px;}}
+code{background:#eef0f2;padding:1px 5px;border-radius:4px;font-size:11.5px;
+font-family:ui-monospace,SFMono-Regular,Menlo,monospace;}
+
+/* interactive trade markers overlaid on the chart image */
+.chart{position:relative;line-height:0;}
+.hot{position:absolute;transform:translate(-50%,-50%);border-radius:50%;
+cursor:pointer;z-index:3;}
+.hot::after{content:'';position:absolute;inset:0;border-radius:50%;
+box-shadow:0 0 0 2px rgba(31,119,180,0);transition:box-shadow .12s;}
+.hot:hover::after{box-shadow:0 0 0 3px rgba(31,119,180,.55);}
+.hint{font-size:11.5px;color:#888;margin-top:10px;line-height:1.5;}
+#tip{position:fixed;z-index:50;max-width:430px;background:#1f2329;color:#f2f4f6;
+padding:13px 15px;border-radius:9px;font-size:12.5px;line-height:1.6;
+box-shadow:0 6px 24px rgba(0,0,0,.3);pointer-events:none;opacity:0;
+transition:opacity .12s;}
+#tip.on{opacity:1;}
+#tip .th{font-weight:700;font-size:13px;margin-bottom:7px;display:flex;
+align-items:center;gap:8px;}
+#tip .badge{padding:1px 8px;border-radius:10px;font-size:10.5px;font-weight:700;}
+#tip .b-buy{background:#2ca02c;color:#fff;} #tip .b-sell{background:#d62728;color:#fff;}
+#tip .meta{color:#9aa3ad;font-size:11.5px;margin-bottom:8px;
+font-variant-numeric:tabular-nums;}
+#tip .why{border-top:1px solid #363c44;padding-top:8px;white-space:pre-wrap;}
+#tip .why b{color:#9aa3ad;font-weight:600;font-size:10.5px;letter-spacing:.4px;
+text-transform:uppercase;display:block;margin-bottom:4px;}
+
+/* ---- interactive overview curve (inline SVG, no external deps) ---- */
+.ichart{position:relative;width:100%;}
+.ichart svg{width:100%;height:auto;display:block;overflow:visible;}
+.ichart .gridline{stroke:#e4e7ea;stroke-width:1;}
+.ichart .zero{stroke:#9aa3ad;stroke-width:1;}
+.ichart .axis{stroke:#c9cdd2;stroke-width:1;}
+.ichart .tickl{font-size:10.5px;fill:#8b939b;}
+.ichart .axttl{font-size:11px;fill:#666;font-weight:600;}
+/* series: dim everything except the focused one */
+.ichart .srs{fill:none;stroke-linejoin:round;stroke-linecap:round;
+stroke-width:2.1;transition:opacity .12s,stroke-width .12s;}
+.ichart .srs.bench{stroke-dasharray:6 4;stroke-width:1.7;}
+.ichart.focus .srs{opacity:.16;}
+.ichart.focus .srs.up{opacity:1;stroke-width:3.4;}
+.ichart .srs.off{display:none;}
+.ichart .hitline{fill:none;stroke:transparent;stroke-width:16;cursor:pointer;
+pointer-events:stroke;}
+.ichart .hitline.off{display:none;}
+.ichart .cursor{stroke:#9aa3ad;stroke-width:1;stroke-dasharray:3 3;opacity:0;}
+.ichart .cursor.on{opacity:1;}
+.ichart .knob{fill:#fff;stroke-width:2.5;opacity:0;transition:opacity .12s;}
+.ichart .knob.on{opacity:1;}
+.ilegend{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 0;}
+.ilegend .it{display:inline-flex;align-items:center;gap:7px;padding:5px 11px;
+border:1px solid #e2e5e8;border-radius:16px;background:#fff;cursor:pointer;
+font-size:12px;user-select:none;transition:background .12s,opacity .12s;}
+.ilegend .it:hover{background:#f2f4f6;}
+.ilegend .it.off{opacity:.4;}
+.ilegend .it .sw{width:13px;height:3px;border-radius:2px;flex:none;}
+.ilegend .it .fr{font-variant-numeric:tabular-nums;color:#666;font-size:11.5px;}
+/* curve tooltip */
+#ctip{position:fixed;z-index:60;width:290px;background:#1f2329;color:#f2f4f6;
+padding:12px 14px;border-radius:9px;font-size:12.5px;line-height:1.55;
+box-shadow:0 6px 24px rgba(0,0,0,.3);pointer-events:none;opacity:0;
+transition:opacity .12s;}
+#ctip.on{opacity:1;}
+#ctip .ch{font-weight:700;font-size:13px;display:flex;align-items:center;gap:8px;
+margin-bottom:3px;}
+#ctip .ch .sw{width:13px;height:3px;border-radius:2px;flex:none;}
+#ctip .cfam{color:#9aa3ad;font-size:11px;margin-bottom:9px;}
+#ctip .cbig{font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;
+margin-bottom:2px;}
+#ctip .cat{color:#9aa3ad;font-size:11.5px;font-variant-numeric:tabular-nums;
+margin-bottom:9px;}
+#ctip dl{margin:0;display:grid;grid-template-columns:auto auto;gap:3px 12px;
+font-size:11.5px;border-top:1px solid #363c44;padding-top:8px;}
+#ctip dt{color:#9aa3ad;} #ctip dd{margin:0;text-align:right;
+font-variant-numeric:tabular-nums;}
+#ctip .cpos{color:#5ddb8f;} #ctip .cneg{color:#ff8a80;}
+
+/* ---- per-agent interactive price chart (every session hoverable) ---- */
+.pchart svg:focus{outline:2px solid rgba(31,119,180,.4);outline-offset:2px;}
+.pchart .holdband{fill:#ff7f0e;opacity:.07;}
+.pchart .pxline{fill:none;stroke:#333;stroke-width:1.7;stroke-linejoin:round;}
+.pchart .pdot{stroke:#fff;stroke-width:1.1;transition:r .1s;}
+.pchart .pdot.trade{stroke-width:1.4;}
+.pchart .pdot.at{stroke:#1f2329;stroke-width:1.8;}
+.pchart .pknob{fill:none;stroke-width:2.5;opacity:0;transition:opacity .1s;}
+.pchart .pknob.on{opacity:1;}
+.ilegend.static .it.no{cursor:default;}
+.ilegend .sw.dot{width:11px;height:11px;border-radius:50%;}
+.ilegend .sw.up{width:0;height:0;background:none;border-left:6px solid transparent;
+border-right:6px solid transparent;border-bottom:10px solid #2ca02c;}
+.ilegend .sw.down{width:0;height:0;background:none;border-left:6px solid transparent;
+border-right:6px solid transparent;border-top:10px solid #d62728;}
+.ilegend .sw.band{width:16px;height:11px;border-radius:2px;
+background:rgba(255,127,14,.28);}
+#ptip{position:fixed;z-index:60;width:430px;max-width:calc(100vw - 24px);
+background:#1f2329;color:#f2f4f6;padding:13px 15px;border-radius:9px;
+font-size:12.5px;line-height:1.6;box-shadow:0 6px 24px rgba(0,0,0,.3);
+pointer-events:none;opacity:0;transition:opacity .12s;}
+#ptip.on{opacity:1;}
+#ptip .ch{font-weight:700;font-size:13px;margin-bottom:7px;display:flex;
+align-items:center;gap:8px;flex-wrap:wrap;}
+#ptip .badge{padding:1px 8px;border-radius:10px;font-size:10.5px;font-weight:700;}
+#ptip .b-buy{background:#2ca02c;color:#fff;}
+#ptip .b-sell{background:#d62728;color:#fff;}
+#ptip .b-hold{background:#4a5058;color:#dfe3e7;}
+#ptip .sess{color:#9aa3ad;font-weight:400;font-size:11.5px;}
+#ptip .mism{color:#ffcc66;font-weight:600;font-size:11px;}
+#ptip .cat{color:#9aa3ad;font-size:11.5px;margin-bottom:9px;
+font-variant-numeric:tabular-nums;}
+#ptip .cpos{color:#5ddb8f;} #ptip .cneg{color:#ff8a80;}
+/* long model reasoning: fade the tail instead of hard-cutting it, and point
+   the reader at the full text in the table below */
+#ptip .why{border-top:1px solid #363c44;padding-top:8px;white-space:pre-wrap;
+max-height:44vh;overflow:hidden;position:relative;}
+#ptip .why.clip{padding-bottom:16px;
+mask-image:linear-gradient(#000 calc(100% - 34px),transparent);
+-webkit-mask-image:linear-gradient(#000 calc(100% - 34px),transparent);}
+#ptip .more{color:#8b939b;font-size:10.5px;font-style:italic;margin-top:6px;}
+#ptip .why b{color:#9aa3ad;font-weight:600;font-size:10.5px;letter-spacing:.4px;
+text-transform:uppercase;display:block;margin-bottom:4px;}
+
+/* sortable table headers */
+th.sortable {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  transition: background 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+th.sortable:hover {
+  background: #f1f4f8;
+  color: #1f77b4;
+}
+th.sortable::after {
+  content: ' ⇅';
+  opacity: 0.3;
+  font-size: 10px;
+  margin-left: 3px;
+  display: inline-block;
+}
+th.sortable.sort-asc::after {
+  content: ' ▲';
+  opacity: 0.9;
+  color: #1f77b4;
+  font-size: 9px;
+  margin-left: 3px;
+  display: inline-block;
+}
+th.sortable.sort-desc::after {
+  content: ' ▼';
+  opacity: 0.9;
+  color: #1f77b4;
+  font-size: 9px;
+  margin-left: 3px;
+  display: inline-block;
+}
+th.sortable.sort-asc, th.sortable.sort-desc {
+  background: #edf4fa;
+  color: #1f77b4;
+}
+
+
+/* sortable matrix table */
+th.sortable {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  transition: background 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+th.sortable:hover {
+  background: #f1f4f8;
+  color: #1f77b4;
+}
+th.sortable::after {
+  content: ' ⇅';
+  opacity: 0.3;
+  font-size: 10px;
+  margin-left: 3px;
+  display: inline-block;
+}
+th.sortable.sort-asc::after {
+  content: ' ▲';
+  opacity: 0.9;
+  color: #1f77b4;
+  font-size: 9px;
+  margin-left: 3px;
+  display: inline-block;
+}
+th.sortable.sort-desc::after {
+  content: ' ▼';
+  opacity: 0.9;
+  color: #1f77b4;
+  font-size: 9px;
+  margin-left: 3px;
+  display: inline-block;
+}
+th.sortable.sort-asc, th.sortable.sort-desc {
+  background: #edf4fa;
+  color: #1f77b4;
+}
+
+/* LLM model filter bar */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 14px 0 16px;
+  flex-wrap: wrap;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+.filter-title {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #334155;
+  white-space: nowrap;
+}
+.filter-group {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  padding: 5px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.12s ease;
+}
+.filter-btn:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+  color: #0f172a;
+}
+.filter-btn.on {
+  background: #1f77b4;
+  border-color: #1f77b4;
+  color: #ffffff;
+}
+.filter-btn .chk {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  line-height: 13px;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.08);
+}
+.filter-btn.on .chk {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+.filter-btn .cnt {
+  font-size: 11px;
+  opacity: 0.85;
+}
+.filter-status {
+  font-size: 12px;
+  color: #64748b;
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+</style></head><body><div class="wrap">
+<div class="head"><div class="head-txt"><h1>Findex<span class="live">LIVE TRADING</span></h1><div class="sub">18 agents across 6 symbols &middot; 2026-06-01 to 2026-09-01 &middot; 65 trading sessions each &middot; decisions taken at the 15:45 US/Eastern cutoff</div></div><a class="brand" href="https://rainwangphy.github.io/lab.html" target="_blank" rel="noopener" title="DIGA@SMU"><img src="data:image/png;base64,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" alt="DIGA@SMU" width="113" height="88" loading="lazy"></a></div>
+<div class="card"><div class="kpis"><div class="kpi"><div class="lbl">Symbols</div><div class="val ">6</div></div><div class="kpi"><div class="lbl">Agents</div><div class="val ">18</div></div><div class="kpi"><div class="lbl">Sessions each</div><div class="val ">65</div></div><div class="kpi"><div class="lbl">Buy &amp; hold (avg)</div><div class="val pos">+7.04%</div></div><div class="kpi"><div class="lbl">Best agent (avg)</div><div class="val pos">+9.77%</div></div><div class="kpi"><div class="lbl">Total orders</div><div class="val ">770</div></div></div></div>
+<div class="card"><h2>Consistency across symbols</h2>
+<div class="filter-bar">
+<span class="filter-title">Filter by LLM:</span>
+<div class="filter-group" id="llm-filter"><button type="button" class="filter-btn on" data-model="all" title="Show all models"><span class="chk">✓</span> All Models <span class="cnt">(18)</span></button><button type="button" class="filter-btn on" data-model="DeepSeek V4 Flash" title="Click to toggle, double-click / Alt-click to solo"><span class="chk">✓</span> DeepSeek V4 Flash <span class="cnt">(9)</span></button><button type="button" class="filter-btn on" data-model="Gemini 3.7 Flash" title="Click to toggle, double-click / Alt-click to solo"><span class="chk">✓</span> Gemini 3.7 Flash <span class="cnt">(9)</span></button></div>
+<span id="filter-status" class="filter-status">18 / 18 agents</span>
+</div>
+<div class="hint">Click any table header (e.g. stock symbol, <b>Avg</b>, Spread, Sharpe) to sort across all agents. Each cell is that agent&rsquo;s P&amp;L on that symbol &mdash; click it to read the daily decisions and reasoning. <b>Avg</b> covers only the symbols an agent actually ran on. <b>Spread</b> is best minus worst symbol: a high average built on a wide spread is far less repeatable than a steady one. <b>Beat B&amp;H</b> counts symbols where the agent outperformed simply buying and holding.</div>
+<table id="matrix"><thead><tr>
+<th class="num sortable" data-type="num" title="Click to sort by rank">#</th>
+<th class="sortable" data-type="str" title="Click to sort by Agent name">Agent</th>
+<th class="num sortable" data-type="num" title="Click to sort by AAPL P&amp;L">AAPL</th><th class="num sortable" data-type="num" title="Click to sort by MSFT P&amp;L">MSFT</th><th class="num sortable" data-type="num" title="Click to sort by TSLA P&amp;L">TSLA</th><th class="num sortable" data-type="num" title="Click to sort by XOM P&amp;L">XOM</th><th class="num sortable" data-type="num" title="Click to sort by CVX P&amp;L">CVX</th><th class="num sortable" data-type="num" title="Click to sort by COP P&amp;L">COP</th>
+<th class="num sortable sort-desc" data-type="num" title="Click to sort by Avg P&amp;L">Avg</th>
+<th class="num sortable" data-type="num" title="Click to sort by Spread">Spread</th>
+<th class="num sortable" data-type="num" title="Click to sort by Avg Alpha">Avg alpha</th>
+<th class="num sortable" data-type="num" title="Click to sort by Avg Sharpe">Avg Sharpe</th>
+<th class="num sortable" data-type="num" title="Click to sort by Beat B&amp;H">Beat B&amp;H</th>
+<th class="num sortable" data-type="num" title="Click to sort by Orders">Orders</th>
+</tr></thead>
+<tbody><tr data-model="DeepSeek V4 Flash"><td class="num rank-num" data-val="1">1</td><td data-val="InvestorAgent (DeepSeek V4 Flash)"><div class="rank"><span class="dot" style="background:#1f77b4"></span><div><div class="agent-name">InvestorAgent (DeepSeek V4 Flash)</div><div class="agent-meta">InvestorAgent</div></div></div></td><td class="num neg" data-val="-8.7194"><a href="AAPL/agents/investoragent-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -14.92 pp &middot; Sharpe -1.15 &middot; 5 orders">-8.72%</a></td><td class="num pos" data-val="26.0932"><a href="MSFT/agents/investoragent-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +17.25 pp &middot; Sharpe 2.42 &middot; 3 orders">+26.09%</a></td><td class="num pos" data-val="0.3891"><a href="TSLA/agents/investoragent-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +14.70 pp &middot; Sharpe 0.18 &middot; 1 orders">+0.39%</a></td><td class="num pos" data-val="11.2441"><a href="XOM/agents/investoragent-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +1.15 pp &middot; Sharpe 1.75 &middot; 3 orders">+11.24%</a></td><td class="num pos" data-val="19.4565"><a href="CVX/agents/investoragent-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +5.92 pp &middot; Sharpe 3.18 &middot; 3 orders">+19.46%</a></td><td class="num pos" data-val="10.1691"><a href="COP/agents/investoragent-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -7.71 pp &middot; Sharpe 1.51 &middot; 3 orders">+10.17%</a></td><td class="num pos" data-val="9.7721"><b>+9.77%</b></td><td class="num" data-val="34.8126">34.81</td><td class="num pos" data-val="2.7324">+2.73</td><td class="num" data-val="1.3136">1.31</td><td class="num" data-val="0.6667">4/6</td><td class="num" data-val="18">18</td></tr><tr data-model="Gemini 3.7 Flash"><td class="num rank-num" data-val="2">2</td><td data-val="QuantHarness (Gemini 3.7 Flash)"><div class="rank"><span class="dot" style="background:#d62728"></span><div><div class="agent-name">QuantHarness (Gemini 3.7 Flash)</div><div class="agent-meta">QuantHarness</div></div></div></td><td class="num neg" data-val="-11.2868"><a href="AAPL/agents/quantharness-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -17.49 pp &middot; Sharpe -1.54 &middot; 5 orders">-11.29%</a></td><td class="num pos" data-val="9.9495"><a href="MSFT/agents/quantharness-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +1.11 pp &middot; Sharpe 1.07 &middot; 3 orders">+9.95%</a></td><td class="num neg" data-val="-1.3232"><a href="TSLA/agents/quantharness-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +12.99 pp &middot; Sharpe -0.06 &middot; 9 orders">-1.32%</a></td><td class="num pos" data-val="13.5655"><a href="XOM/agents/quantharness-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +3.47 pp &middot; Sharpe 3.07 &middot; 3 orders">+13.57%</a></td><td class="num pos" data-val="14.5194"><a href="CVX/agents/quantharness-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +0.98 pp &middot; Sharpe 3.17 &middot; 3 orders">+14.52%</a></td><td class="num pos" data-val="29.9599"><a href="COP/agents/quantharness-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +12.08 pp &middot; Sharpe 4.25 &middot; 1 orders">+29.96%</a></td><td class="num pos" data-val="9.2307"><b>+9.23%</b></td><td class="num" data-val="41.2467">41.25</td><td class="num pos" data-val="2.1911">+2.19</td><td class="num" data-val="1.6614">1.66</td><td class="num" data-val="0.8333">5/6</td><td class="num" data-val="24">24</td></tr><tr data-model="DeepSeek V4 Flash"><td class="num rank-num" data-val="3">3</td><td data-val="FinMem (risk-seeking, DeepSeek V4 Flash)"><div class="rank"><span class="dot" style="background:#2ca02c"></span><div><div class="agent-name">FinMem (risk-seeking, DeepSeek V4 Flash)</div><div class="agent-meta">FinMem</div></div></div></td><td class="num pos" data-val="6.1897"><a href="AAPL/agents/finmem-risk-seeking-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -0.01 pp &middot; Sharpe 0.90 &middot; 1 orders">+6.19%</a></td><td class="num pos" data-val="8.8350"><a href="MSFT/agents/finmem-risk-seeking-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -0.01 pp &middot; Sharpe 0.95 &middot; 1 orders">+8.83%</a></td><td class="num neg" data-val="-14.2718"><a href="TSLA/agents/finmem-risk-seeking-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +0.04 pp &middot; Sharpe -0.77 &middot; 1 orders">-14.27%</a></td><td class="num pos" data-val="10.0929"><a href="XOM/agents/finmem-risk-seeking-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -0.00 pp &middot; Sharpe 1.56 &middot; 1 orders">+10.09%</a></td><td class="num pos" data-val="13.5497"><a href="CVX/agents/finmem-risk-seeking-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +0.01 pp &middot; Sharpe 2.10 &middot; 2 orders">+13.55%</a></td><td class="num pos" data-val="17.8640"><a href="COP/agents/finmem-risk-seeking-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -0.01 pp &middot; Sharpe 2.22 &middot; 1 orders">+17.86%</a></td><td class="num pos" data-val="7.0432"><b>+7.04%</b></td><td class="num" data-val="32.1359">32.14</td><td class="num pos" data-val="0.0036">+0.00</td><td class="num" data-val="1.1595">1.16</td><td class="num" data-val="0.3333">2/6</td><td class="num" data-val="7">7</td></tr><tr data-model="Gemini 3.7 Flash"><td class="num rank-num" data-val="4">4</td><td data-val="FinMem (risk-seeking, Gemini 3.7 Flash)"><div class="rank"><span class="dot" style="background:#ff7f0e"></span><div><div class="agent-name">FinMem (risk-seeking, Gemini 3.7 Flash)</div><div class="agent-meta">FinMem</div></div></div></td><td class="num pos" data-val="6.1897"><a href="AAPL/agents/finmem-risk-seeking-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -0.01 pp &middot; Sharpe 0.90 &middot; 1 orders">+6.19%</a></td><td class="num pos" data-val="8.8350"><a href="MSFT/agents/finmem-risk-seeking-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -0.01 pp &middot; Sharpe 0.95 &middot; 1 orders">+8.83%</a></td><td class="num neg" data-val="-14.2718"><a href="TSLA/agents/finmem-risk-seeking-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +0.04 pp &middot; Sharpe -0.77 &middot; 1 orders">-14.27%</a></td><td class="num pos" data-val="10.0929"><a href="XOM/agents/finmem-risk-seeking-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -0.00 pp &middot; Sharpe 1.56 &middot; 1 orders">+10.09%</a></td><td class="num pos" data-val="13.5429"><a href="CVX/agents/finmem-risk-seeking-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +0.01 pp &middot; Sharpe 2.09 &middot; 2 orders">+13.54%</a></td><td class="num pos" data-val="17.8640"><a href="COP/agents/finmem-risk-seeking-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -0.01 pp &middot; Sharpe 2.22 &middot; 1 orders">+17.86%</a></td><td class="num pos" data-val="7.0421"><b>+7.04%</b></td><td class="num" data-val="32.1359">32.14</td><td class="num pos" data-val="0.0024">+0.00</td><td class="num" data-val="1.1593">1.16</td><td class="num" data-val="0.3333">2/6</td><td class="num" data-val="7">7</td></tr><tr data-model="Gemini 3.7 Flash"><td class="num rank-num" data-val="5">5</td><td data-val="AIHedgeFund (Gemini 3.7 Flash)"><div class="rank"><span class="dot" style="background:#9467bd"></span><div><div class="agent-name">AIHedgeFund (Gemini 3.7 Flash)</div><div class="agent-meta">AIHedgeFund</div></div></div></td><td class="num pos" data-val="14.4044"><a href="AAPL/agents/aihedgefund-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +8.21 pp &middot; Sharpe 2.20 &middot; 3 orders">+14.40%</a></td><td class="num pos" data-val="8.8350"><a href="MSFT/agents/aihedgefund-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -0.01 pp &middot; Sharpe 0.95 &middot; 1 orders">+8.83%</a></td><td class="num pos" data-val="0.0000"><a href="TSLA/agents/aihedgefund-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +14.31 pp &middot; Sharpe 0.00 &middot; 0 orders">+0.00%</a></td><td class="num pos" data-val="0.0000"><a href="XOM/agents/aihedgefund-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -10.09 pp &middot; Sharpe 0.00 &middot; 0 orders">+0.00%</a></td><td class="num pos" data-val="13.0761"><a href="CVX/agents/aihedgefund-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -0.46 pp &middot; Sharpe 3.92 &middot; 1 orders">+13.08%</a></td><td class="num pos" data-val="5.4151"><a href="COP/agents/aihedgefund-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -12.46 pp &middot; Sharpe 2.28 &middot; 2 orders">+5.42%</a></td><td class="num pos" data-val="6.9551"><b>+6.96%</b></td><td class="num" data-val="14.4044">14.40</td><td class="num neg" data-val="-0.0846">-0.08</td><td class="num" data-val="1.5601">1.56</td><td class="num" data-val="0.3333">2/6</td><td class="num" data-val="7">7</td></tr><tr data-model="Gemini 3.7 Flash"><td class="num rank-num" data-val="6">6</td><td data-val="TradingGPT (Gemini 3.7 Flash)"><div class="rank"><span class="dot" style="background:#8c564b"></span><div><div class="agent-name">TradingGPT (Gemini 3.7 Flash)</div><div class="agent-meta">TradingGPT</div></div></div></td><td class="num neg" data-val="-1.4949"><a href="AAPL/agents/tradinggpt-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -7.69 pp &middot; Sharpe -0.17 &middot; 13 orders">-1.49%</a></td><td class="num pos" data-val="10.2748"><a href="MSFT/agents/tradinggpt-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +1.43 pp &middot; Sharpe 1.89 &middot; 5 orders">+10.27%</a></td><td class="num pos" data-val="4.7393"><a href="TSLA/agents/tradinggpt-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +19.05 pp &middot; Sharpe 0.75 &middot; 5 orders">+4.74%</a></td><td class="num pos" data-val="7.0318"><a href="XOM/agents/tradinggpt-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -3.06 pp &middot; Sharpe 1.53 &middot; 6 orders">+7.03%</a></td><td class="num pos" data-val="11.9807"><a href="CVX/agents/tradinggpt-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -1.56 pp &middot; Sharpe 2.84 &middot; 11 orders">+11.98%</a></td><td class="num pos" data-val="0.6322"><a href="COP/agents/tradinggpt-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -17.24 pp &middot; Sharpe 0.22 &middot; 13 orders">+0.63%</a></td><td class="num pos" data-val="5.5273"><b>+5.53%</b></td><td class="num" data-val="13.4756">13.48</td><td class="num neg" data-val="-1.5124">-1.51</td><td class="num" data-val="1.1792">1.18</td><td class="num" data-val="0.3333">2/6</td><td class="num" data-val="53">53</td></tr><tr data-model="DeepSeek V4 Flash"><td class="num rank-num" data-val="7">7</td><td data-val="FinMem (self-adaptive, DeepSeek V4 Flash)"><div class="rank"><span class="dot" style="background:#e377c2"></span><div><div class="agent-name">FinMem (self-adaptive, DeepSeek V4 Flash)</div><div class="agent-meta">FinMem</div></div></div></td><td class="num pos" data-val="6.1897"><a href="AAPL/agents/finmem-self-adaptive-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -0.01 pp &middot; Sharpe 0.90 &middot; 1 orders">+6.19%</a></td><td class="num neg" data-val="-3.2385"><a href="MSFT/agents/finmem-self-adaptive-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -12.08 pp &middot; Sharpe -1.21 &middot; 3 orders">-3.24%</a></td><td class="num neg" data-val="-3.9790"><a href="TSLA/agents/finmem-self-adaptive-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +10.33 pp &middot; Sharpe -0.75 &middot; 3 orders">-3.98%</a></td><td class="num pos" data-val="1.7447"><a href="XOM/agents/finmem-self-adaptive-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -8.35 pp &middot; Sharpe 0.87 &middot; 3 orders">+1.74%</a></td><td class="num pos" data-val="19.5979"><a href="CVX/agents/finmem-self-adaptive-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +6.06 pp &middot; Sharpe 3.58 &middot; 3 orders">+19.60%</a></td><td class="num pos" data-val="9.3314"><a href="COP/agents/finmem-self-adaptive-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -8.54 pp &middot; Sharpe 1.83 &middot; 7 orders">+9.33%</a></td><td class="num pos" data-val="4.9410"><b>+4.94%</b></td><td class="num" data-val="23.5769">23.58</td><td class="num neg" data-val="-2.0986">-2.10</td><td class="num" data-val="0.8699">0.87</td><td class="num" data-val="0.3333">2/6</td><td class="num" data-val="20">20</td></tr><tr data-model="DeepSeek V4 Flash"><td class="num rank-num" data-val="8">8</td><td data-val="AIHedgeFund (DeepSeek V4 Flash)"><div class="rank"><span class="dot" style="background:#17becf"></span><div><div class="agent-name">AIHedgeFund (DeepSeek V4 Flash)</div><div class="agent-meta">AIHedgeFund</div></div></div></td><td class="num pos" data-val="2.9012"><a href="AAPL/agents/aihedgefund-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -3.30 pp &middot; Sharpe 1.96 &middot; 2 orders">+2.90%</a></td><td class="num pos" data-val="4.2245"><a href="MSFT/agents/aihedgefund-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -4.62 pp &middot; Sharpe 1.32 &middot; 9 orders">+4.22%</a></td><td class="num pos" data-val="0.0000"><a href="TSLA/agents/aihedgefund-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +14.31 pp &middot; Sharpe 0.00 &middot; 0 orders">+0.00%</a></td><td class="num pos" data-val="0.0000"><a href="XOM/agents/aihedgefund-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -10.09 pp &middot; Sharpe 0.00 &middot; 0 orders">+0.00%</a></td><td class="num pos" data-val="0.0000"><a href="CVX/agents/aihedgefund-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -13.54 pp &middot; Sharpe 0.00 &middot; 0 orders">+0.00%</a></td><td class="num pos" data-val="11.0647"><a href="COP/agents/aihedgefund-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -6.81 pp &middot; Sharpe 3.40 &middot; 6 orders">+11.06%</a></td><td class="num pos" data-val="3.0317"><b>+3.03%</b></td><td class="num" data-val="11.0647">11.06</td><td class="num neg" data-val="-4.0079">-4.01</td><td class="num" data-val="1.1137">1.11</td><td class="num" data-val="0.1667">1/6</td><td class="num" data-val="17">17</td></tr><tr data-model="DeepSeek V4 Flash"><td class="num rank-num" data-val="9">9</td><td data-val="TradingGPT (DeepSeek V4 Flash)"><div class="rank"><span class="dot" style="background:#bcbd22"></span><div><div class="agent-name">TradingGPT (DeepSeek V4 Flash)</div><div class="agent-meta">TradingGPT</div></div></div></td><td class="num neg" data-val="-2.1611"><a href="AAPL/agents/tradinggpt-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -8.36 pp &middot; Sharpe -0.71 &middot; 9 orders">-2.16%</a></td><td class="num pos" data-val="2.8070"><a href="MSFT/agents/tradinggpt-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -6.03 pp &middot; Sharpe 0.74 &middot; 7 orders">+2.81%</a></td><td class="num neg" data-val="-5.0834"><a href="TSLA/agents/tradinggpt-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +9.23 pp &middot; Sharpe -1.64 &middot; 8 orders">-5.08%</a></td><td class="num pos" data-val="4.4644"><a href="XOM/agents/tradinggpt-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -5.63 pp &middot; Sharpe 1.07 &middot; 6 orders">+4.46%</a></td><td class="num pos" data-val="10.0974"><a href="CVX/agents/tradinggpt-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -3.44 pp &middot; Sharpe 2.84 &middot; 7 orders">+10.10%</a></td><td class="num pos" data-val="2.0989"><a href="COP/agents/tradinggpt-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -15.78 pp &middot; Sharpe 0.53 &middot; 9 orders">+2.10%</a></td><td class="num pos" data-val="2.0372"><b>+2.04%</b></td><td class="num" data-val="15.1808">15.18</td><td class="num neg" data-val="-5.0024">-5.00</td><td class="num" data-val="0.4724">0.47</td><td class="num" data-val="0.1667">1/6</td><td class="num" data-val="46">46</td></tr><tr data-model="DeepSeek V4 Flash"><td class="num rank-num" data-val="10">10</td><td data-val="QuantHarness (DeepSeek V4 Flash)"><div class="rank"><span class="dot" style="background:#7f7f7f"></span><div><div class="agent-name">QuantHarness (DeepSeek V4 Flash)</div><div class="agent-meta">QuantHarness</div></div></div></td><td class="num neg" data-val="-10.3749"><a href="AAPL/agents/quantharness-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -16.57 pp &middot; Sharpe -2.34 &middot; 12 orders">-10.37%</a></td><td class="num pos" data-val="4.4788"><a href="MSFT/agents/quantharness-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -4.36 pp &middot; Sharpe 0.62 &middot; 5 orders">+4.48%</a></td><td class="num neg" data-val="-6.4388"><a href="TSLA/agents/quantharness-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +7.87 pp &middot; Sharpe -0.74 &middot; 9 orders">-6.44%</a></td><td class="num pos" data-val="7.5675"><a href="XOM/agents/quantharness-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -2.53 pp &middot; Sharpe 3.79 &middot; 5 orders">+7.57%</a></td><td class="num pos" data-val="11.2261"><a href="CVX/agents/quantharness-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -2.31 pp &middot; Sharpe 2.95 &middot; 7 orders">+11.23%</a></td><td class="num pos" data-val="4.3440"><a href="COP/agents/quantharness-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -13.53 pp &middot; Sharpe 1.01 &middot; 12 orders">+4.34%</a></td><td class="num pos" data-val="1.8004"><b>+1.80%</b></td><td class="num" data-val="21.6010">21.60</td><td class="num neg" data-val="-5.2392">-5.24</td><td class="num" data-val="0.8801">0.88</td><td class="num" data-val="0.1667">1/6</td><td class="num" data-val="50">50</td></tr><tr data-model="Gemini 3.7 Flash"><td class="num rank-num" data-val="11">11</td><td data-val="DeepFund (Gemini 3.7 Flash)"><div class="rank"><span class="dot" style="background:#1f77b4"></span><div><div class="agent-name">DeepFund (Gemini 3.7 Flash)</div><div class="agent-meta">DeepFund</div></div></div></td><td class="num pos" data-val="2.8364"><a href="AAPL/agents/deepfund-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -3.36 pp &middot; Sharpe 0.61 &middot; 60 orders">+2.84%</a></td><td class="num pos" data-val="1.8342"><a href="MSFT/agents/deepfund-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -7.01 pp &middot; Sharpe 0.36 &middot; 63 orders">+1.83%</a></td><td class="num neg" data-val="-2.8491"><a href="TSLA/agents/deepfund-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +11.46 pp &middot; Sharpe -0.18 &middot; 41 orders">-2.85%</a></td><td class="num neg" data-val="-8.6990"><a href="XOM/agents/deepfund-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -18.79 pp &middot; Sharpe -1.69 &middot; 54 orders">-8.70%</a></td><td class="num pos" data-val="2.2957"><a href="CVX/agents/deepfund-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -11.24 pp &middot; Sharpe 1.96 &middot; 2 orders">+2.30%</a></td><td class="num pos" data-val="13.3523"><a href="COP/agents/deepfund-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -4.52 pp &middot; Sharpe 2.98 &middot; 61 orders">+13.35%</a></td><td class="num pos" data-val="1.4617"><b>+1.46%</b></td><td class="num" data-val="22.0513">22.05</td><td class="num neg" data-val="-5.5779">-5.58</td><td class="num" data-val="0.6723">0.67</td><td class="num" data-val="0.1667">1/6</td><td class="num" data-val="281">281</td></tr><tr data-model="Gemini 3.7 Flash"><td class="num rank-num" data-val="12">12</td><td data-val="FinMem (risk-averse, Gemini 3.7 Flash)"><div class="rank"><span class="dot" style="background:#d62728"></span><div><div class="agent-name">FinMem (risk-averse, Gemini 3.7 Flash)</div><div class="agent-meta">FinMem</div></div></div></td><td class="num neg" data-val="-3.9236"><a href="AAPL/agents/finmem-risk-averse-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -10.12 pp &middot; Sharpe -2.84 &middot; 6 orders">-3.92%</a></td><td class="num pos" data-val="8.8350"><a href="MSFT/agents/finmem-risk-averse-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -0.01 pp &middot; Sharpe 0.95 &middot; 1 orders">+8.83%</a></td><td class="num pos" data-val="0.0000"><a href="TSLA/agents/finmem-risk-averse-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +14.31 pp &middot; Sharpe 0.00 &middot; 0 orders">+0.00%</a></td><td class="num pos" data-val="0.0000"><a href="XOM/agents/finmem-risk-averse-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -10.09 pp &middot; Sharpe 0.00 &middot; 0 orders">+0.00%</a></td><td class="num pos" data-val="5.2480"><a href="CVX/agents/finmem-risk-averse-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -8.29 pp &middot; Sharpe 4.07 &middot; 2 orders">+5.25%</a></td><td class="num neg" data-val="-4.7903"><a href="COP/agents/finmem-risk-averse-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -22.67 pp &middot; Sharpe -2.17 &middot; 4 orders">-4.79%</a></td><td class="num pos" data-val="0.8948"><b>+0.89%</b></td><td class="num" data-val="13.6253">13.63</td><td class="num neg" data-val="-6.1448">-6.14</td><td class="num" data-val="0.0022">0.00</td><td class="num" data-val="0.1667">1/6</td><td class="num" data-val="13">13</td></tr><tr data-model="Gemini 3.7 Flash"><td class="num rank-num" data-val="13">13</td><td data-val="FinMem (self-adaptive, Gemini 3.7 Flash)"><div class="rank"><span class="dot" style="background:#2ca02c"></span><div><div class="agent-name">FinMem (self-adaptive, Gemini 3.7 Flash)</div><div class="agent-meta">FinMem</div></div></div></td><td class="num pos" data-val="6.1897"><a href="AAPL/agents/finmem-self-adaptive-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -0.01 pp &middot; Sharpe 0.90 &middot; 1 orders">+6.19%</a></td><td class="num neg" data-val="-5.2595"><a href="MSFT/agents/finmem-self-adaptive-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -14.10 pp &middot; Sharpe -2.44 &middot; 3 orders">-5.26%</a></td><td class="num neg" data-val="-8.9821"><a href="TSLA/agents/finmem-self-adaptive-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +5.33 pp &middot; Sharpe -2.33 &middot; 4 orders">-8.98%</a></td><td class="num pos" data-val="1.7447"><a href="XOM/agents/finmem-self-adaptive-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -8.35 pp &middot; Sharpe 0.87 &middot; 3 orders">+1.74%</a></td><td class="num pos" data-val="8.2026"><a href="CVX/agents/finmem-self-adaptive-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -5.33 pp &middot; Sharpe 2.73 &middot; 3 orders">+8.20%</a></td><td class="num pos" data-val="0.7053"><a href="COP/agents/finmem-self-adaptive-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -17.17 pp &middot; Sharpe 0.24 &middot; 5 orders">+0.71%</a></td><td class="num pos" data-val="0.4335"><b>+0.43%</b></td><td class="num" data-val="17.1847">17.18</td><td class="num neg" data-val="-6.6062">-6.61</td><td class="num" data-val="-0.0060">-0.01</td><td class="num" data-val="0.1667">1/6</td><td class="num" data-val="19">19</td></tr><tr data-model="DeepSeek V4 Flash"><td class="num rank-num" data-val="14">14</td><td data-val="FinMem (risk-averse, DeepSeek V4 Flash)"><div class="rank"><span class="dot" style="background:#ff7f0e"></span><div><div class="agent-name">FinMem (risk-averse, DeepSeek V4 Flash)</div><div class="agent-meta">FinMem</div></div></div></td><td class="num pos" data-val="0.0000"><a href="AAPL/agents/finmem-risk-averse-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -6.20 pp &middot; Sharpe 0.00 &middot; 0 orders">+0.00%</a></td><td class="num pos" data-val="0.0000"><a href="MSFT/agents/finmem-risk-averse-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -8.84 pp &middot; Sharpe 0.00 &middot; 0 orders">+0.00%</a></td><td class="num pos" data-val="0.0000"><a href="TSLA/agents/finmem-risk-averse-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +14.31 pp &middot; Sharpe 0.00 &middot; 0 orders">+0.00%</a></td><td class="num pos" data-val="0.0000"><a href="XOM/agents/finmem-risk-averse-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -10.09 pp &middot; Sharpe 0.00 &middot; 0 orders">+0.00%</a></td><td class="num pos" data-val="0.0000"><a href="CVX/agents/finmem-risk-averse-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -13.54 pp &middot; Sharpe 0.00 &middot; 0 orders">+0.00%</a></td><td class="num pos" data-val="2.3173"><a href="COP/agents/finmem-risk-averse-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -15.56 pp &middot; Sharpe 2.87 &middot; 2 orders">+2.32%</a></td><td class="num pos" data-val="0.3862"><b>+0.39%</b></td><td class="num" data-val="2.3173">2.32</td><td class="num neg" data-val="-6.6535">-6.65</td><td class="num" data-val="0.4790">0.48</td><td class="num" data-val="0.1667">1/6</td><td class="num" data-val="2">2</td></tr><tr data-model="DeepSeek V4 Flash"><td class="num rank-num" data-val="15">15</td><td data-val="DeepFund (DeepSeek V4 Flash)"><div class="rank"><span class="dot" style="background:#9467bd"></span><div><div class="agent-name">DeepFund (DeepSeek V4 Flash)</div><div class="agent-meta">DeepFund</div></div></div></td><td class="num pos" data-val="2.5344"><a href="AAPL/agents/deepfund-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -3.66 pp &middot; Sharpe 1.96 &middot; 2 orders">+2.53%</a></td><td class="num pos" data-val="0.0577"><a href="MSFT/agents/deepfund-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -8.78 pp &middot; Sharpe 0.10 &middot; 51 orders">+0.06%</a></td><td class="num neg" data-val="-16.1151"><a href="TSLA/agents/deepfund-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -1.81 pp &middot; Sharpe -1.50 &middot; 38 orders">-16.12%</a></td><td class="num pos" data-val="1.0227"><a href="XOM/agents/deepfund-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -9.07 pp &middot; Sharpe 0.36 &middot; 39 orders">+1.02%</a></td><td class="num pos" data-val="2.2957"><a href="CVX/agents/deepfund-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -11.24 pp &middot; Sharpe 1.96 &middot; 2 orders">+2.30%</a></td><td class="num pos" data-val="10.6324"><a href="COP/agents/deepfund-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -7.24 pp &middot; Sharpe 3.13 &middot; 2 orders">+10.63%</a></td><td class="num pos" data-val="0.0713"><b>+0.07%</b></td><td class="num" data-val="26.7475">26.75</td><td class="num neg" data-val="-6.9684">-6.97</td><td class="num" data-val="1.0036">1.00</td><td class="num" data-val="0.0000">0/6</td><td class="num" data-val="134">134</td></tr><tr data-model="Gemini 3.7 Flash"><td class="num rank-num" data-val="16">16</td><td data-val="FinAgent (Gemini 3.7 Flash)"><div class="rank"><span class="dot" style="background:#8c564b"></span><div><div class="agent-name">FinAgent (Gemini 3.7 Flash)</div><div class="agent-meta">FinAgent</div></div></div></td><td class="num pos" data-val="0.0000"><a href="AAPL/agents/finagent-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -6.20 pp &middot; Sharpe 0.00 &middot; 0 orders">+0.00%</a></td><td class="num pos" data-val="0.0000"><a href="MSFT/agents/finagent-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -8.84 pp &middot; Sharpe 0.00 &middot; 0 orders">+0.00%</a></td><td class="num pos" data-val="0.0000"><a href="TSLA/agents/finagent-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +14.31 pp &middot; Sharpe 0.00 &middot; 0 orders">+0.00%</a></td><td class="num pos" data-val="0.0000"><a href="XOM/agents/finagent-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -10.09 pp &middot; Sharpe 0.00 &middot; 0 orders">+0.00%</a></td><td class="num pos" data-val="0.0000"><a href="CVX/agents/finagent-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -13.54 pp &middot; Sharpe 0.00 &middot; 0 orders">+0.00%</a></td><td class="num pos" data-val="0.0000"><a href="COP/agents/finagent-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -17.88 pp &middot; Sharpe 0.00 &middot; 0 orders">+0.00%</a></td><td class="num pos" data-val="0.0000"><b>+0.00%</b></td><td class="num" data-val="0.0000">0.00</td><td class="num neg" data-val="-7.0397">-7.04</td><td class="num" data-val="0.0000">0.00</td><td class="num" data-val="0.1667">1/6</td><td class="num" data-val="0">0</td></tr><tr data-model="Gemini 3.7 Flash"><td class="num rank-num" data-val="17">17</td><td data-val="InvestorAgent (Gemini 3.7 Flash)"><div class="rank"><span class="dot" style="background:#e377c2"></span><div><div class="agent-name">InvestorAgent (Gemini 3.7 Flash)</div><div class="agent-meta">InvestorAgent</div></div></div></td><td class="num pos" data-val="0.0000"><a href="AAPL/agents/investoragent-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -6.20 pp &middot; Sharpe 0.00 &middot; 0 orders">+0.00%</a></td><td class="num pos" data-val="0.0000"><a href="MSFT/agents/investoragent-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -8.84 pp &middot; Sharpe 0.00 &middot; 0 orders">+0.00%</a></td><td class="num pos" data-val="0.0000"><a href="TSLA/agents/investoragent-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha +14.31 pp &middot; Sharpe 0.00 &middot; 0 orders">+0.00%</a></td><td class="num pos" data-val="0.0000"><a href="XOM/agents/investoragent-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -10.09 pp &middot; Sharpe 0.00 &middot; 0 orders">+0.00%</a></td><td class="num pos" data-val="0.0000"><a href="CVX/agents/investoragent-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -13.54 pp &middot; Sharpe 0.00 &middot; 0 orders">+0.00%</a></td><td class="num pos" data-val="0.0000"><a href="COP/agents/investoragent-gemini-3-7-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -17.88 pp &middot; Sharpe 0.00 &middot; 0 orders">+0.00%</a></td><td class="num pos" data-val="0.0000"><b>+0.00%</b></td><td class="num" data-val="0.0000">0.00</td><td class="num neg" data-val="-7.0397">-7.04</td><td class="num" data-val="0.0000">0.00</td><td class="num" data-val="0.1667">1/6</td><td class="num" data-val="0">0</td></tr><tr data-model="DeepSeek V4 Flash"><td class="num rank-num" data-val="18">18</td><td data-val="FinAgent (DeepSeek V4 Flash)"><div class="rank"><span class="dot" style="background:#17becf"></span><div><div class="agent-name">FinAgent (DeepSeek V4 Flash)</div><div class="agent-meta">FinAgent</div></div></div></td><td class="num neg" data-val="-10.1161"><a href="AAPL/agents/finagent-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -16.31 pp &middot; Sharpe -1.36 &middot; 17 orders">-10.12%</a></td><td class="num pos" data-val="7.9416"><a href="MSFT/agents/finagent-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -0.90 pp &middot; Sharpe 0.91 &middot; 17 orders">+7.94%</a></td><td class="num neg" data-val="-27.2696"><a href="TSLA/agents/finagent-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -12.96 pp &middot; Sharpe -2.28 &middot; 17 orders">-27.27%</a></td><td class="num pos" data-val="0.0000"><a href="XOM/agents/finagent-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -10.09 pp &middot; Sharpe 0.00 &middot; 0 orders">+0.00%</a></td><td class="num pos" data-val="3.5150"><a href="CVX/agents/finagent-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -10.02 pp &middot; Sharpe 0.77 &middot; 21 orders">+3.52%</a></td><td class="num pos" data-val="0.0000"><a href="COP/agents/finagent-deepseek-v4-flash/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor" title="alpha -17.88 pp &middot; Sharpe 0.00 &middot; 0 orders">+0.00%</a></td><td class="num neg" data-val="-4.3215"><b>-4.32%</b></td><td class="num" data-val="35.2111">35.21</td><td class="num neg" data-val="-11.3612">-11.36</td><td class="num" data-val="-0.3286">-0.33</td><td class="num" data-val="0.0000">0/6</td><td class="num" data-val="72">72</td></tr></tbody></table></div>
+<div class="card"><h2>By symbol</h2><div class="grid2"><div class="mini">
+<div class="rank"><div><h3>AAPL</h3>
+<div class="agent-meta">18 agents &middot; buy &amp; hold
++6.20%</div></div></div>
+<div class="big pos">
++14.40%</div>
+<div class="agent-meta" style="margin:-6px 0 10px">best:
+AIHedgeFund (Gemini 3.7 Flash)</div>
+<dl><dt>AIHedgeFund (Gemini 3.7 Flash)</dt><dd class="pos">+14.40%</dd><dt>FinMem (self-adaptive, DeepSeek V4 Flash)</dt><dd class="pos">+6.19%</dd><dt>FinMem (self-adaptive, Gemini 3.7 Flash)</dt><dd class="pos">+6.19%</dd></dl>
+<div style="margin-top:13px"><a class="detail-link"
+href="AAPL/">All 18 agents
+&rarr;</a></div></div><div class="mini">
+<div class="rank"><div><h3>MSFT</h3>
+<div class="agent-meta">18 agents &middot; buy &amp; hold
++8.84%</div></div></div>
+<div class="big pos">
++26.09%</div>
+<div class="agent-meta" style="margin:-6px 0 10px">best:
+InvestorAgent (DeepSeek V4 Flash)</div>
+<dl><dt>InvestorAgent (DeepSeek V4 Flash)</dt><dd class="pos">+26.09%</dd><dt>TradingGPT (Gemini 3.7 Flash)</dt><dd class="pos">+10.27%</dd><dt>QuantHarness (Gemini 3.7 Flash)</dt><dd class="pos">+9.95%</dd></dl>
+<div style="margin-top:13px"><a class="detail-link"
+href="MSFT/">All 18 agents
+&rarr;</a></div></div><div class="mini">
+<div class="rank"><div><h3>TSLA</h3>
+<div class="agent-meta">18 agents &middot; buy &amp; hold
+-14.31%</div></div></div>
+<div class="big pos">
++4.74%</div>
+<div class="agent-meta" style="margin:-6px 0 10px">best:
+TradingGPT (Gemini 3.7 Flash)</div>
+<dl><dt>TradingGPT (Gemini 3.7 Flash)</dt><dd class="pos">+4.74%</dd><dt>InvestorAgent (DeepSeek V4 Flash)</dt><dd class="pos">+0.39%</dd><dt>FinMem (risk-averse, DeepSeek V4 Flash)</dt><dd class="pos">+0.00%</dd></dl>
+<div style="margin-top:13px"><a class="detail-link"
+href="TSLA/">All 18 agents
+&rarr;</a></div></div><div class="mini">
+<div class="rank"><div><h3>XOM</h3>
+<div class="agent-meta">18 agents &middot; buy &amp; hold
++10.09%</div></div></div>
+<div class="big pos">
++13.57%</div>
+<div class="agent-meta" style="margin:-6px 0 10px">best:
+QuantHarness (Gemini 3.7 Flash)</div>
+<dl><dt>QuantHarness (Gemini 3.7 Flash)</dt><dd class="pos">+13.57%</dd><dt>InvestorAgent (DeepSeek V4 Flash)</dt><dd class="pos">+11.24%</dd><dt>FinMem (risk-seeking, DeepSeek V4 Flash)</dt><dd class="pos">+10.09%</dd></dl>
+<div style="margin-top:13px"><a class="detail-link"
+href="XOM/">All 18 agents
+&rarr;</a></div></div><div class="mini">
+<div class="rank"><div><h3>CVX</h3>
+<div class="agent-meta">18 agents &middot; buy &amp; hold
++13.54%</div></div></div>
+<div class="big pos">
++19.60%</div>
+<div class="agent-meta" style="margin:-6px 0 10px">best:
+FinMem (self-adaptive, DeepSeek V4 Flash)</div>
+<dl><dt>FinMem (self-adaptive, DeepSeek V4 Flash)</dt><dd class="pos">+19.60%</dd><dt>InvestorAgent (DeepSeek V4 Flash)</dt><dd class="pos">+19.46%</dd><dt>QuantHarness (Gemini 3.7 Flash)</dt><dd class="pos">+14.52%</dd></dl>
+<div style="margin-top:13px"><a class="detail-link"
+href="CVX/">All 18 agents
+&rarr;</a></div></div><div class="mini">
+<div class="rank"><div><h3>COP</h3>
+<div class="agent-meta">18 agents &middot; buy &amp; hold
++17.88%</div></div></div>
+<div class="big pos">
++29.96%</div>
+<div class="agent-meta" style="margin:-6px 0 10px">best:
+QuantHarness (Gemini 3.7 Flash)</div>
+<dl><dt>QuantHarness (Gemini 3.7 Flash)</dt><dd class="pos">+29.96%</dd><dt>FinMem (risk-seeking, DeepSeek V4 Flash)</dt><dd class="pos">+17.86%</dd><dt>FinMem (risk-seeking, Gemini 3.7 Flash)</dt><dd class="pos">+17.86%</dd></dl>
+<div style="margin-top:13px"><a class="detail-link"
+href="COP/">All 18 agents
+&rarr;</a></div></div></div></div>
+<div class="card"><h2>Source code</h2><div class="sub" style="margin-bottom:12px">Each agent is the upstream research implementation, vendored under <code>baseline/</code>.</div><table><thead><tr><th>Agent</th><th>Upstream repository</th><th>Reference</th></tr></thead><tbody><tr><td><div class="agent-name">InvestorAgent</div><div class="agent-meta">Upstream is an MCP tool server, not a trader; here a decision loop calls its indicator/statistics tools, reimplemented over local point-in-time data.</div></td><td><a href="https://github.com/ferdousbhai/investor-agent" target="_blank" rel="noopener">ferdousbhai/investor-agent</a></td><td>&mdash;</td></tr><tr><td><div class="agent-name">QuantHarness</div><div class="agent-meta">Indicator, pattern and trend agents feed a decision agent over a short price window; built for high-frequency use, hence the forced-direction (no-hold) variant.</div></td><td><a href="https://github.com/Y-Research-SBU/QuantHarness" target="_blank" rel="noopener">Y-Research-SBU/QuantHarness</a></td><td><a href="https://arxiv.org/abs/2509.09995" target="_blank" rel="noopener">arXiv:2509.09995</a></td></tr><tr><td><div class="agent-name">FinMem</div><div class="agent-meta">Layered memory with configurable risk preference; profiles, reflects and retrieves past events to time entries.</div></td><td><a href="https://github.com/pipiku915/FinMem-LLM-StockTrading" target="_blank" rel="noopener">pipiku915/FinMem-LLM-StockTrading</a></td><td><a href="https://arxiv.org/abs/2311.13743" target="_blank" rel="noopener">arXiv:2311.13743</a></td></tr><tr><td><div class="agent-name">AIHedgeFund</div><div class="agent-meta">A desk of investor personas (Buffett, Munger, Graham, Lynch, Druckenmiller) reasoning over point-in-time fundamentals, blended into one decision.</div></td><td><a href="https://github.com/virattt/ai-hedge-fund" target="_blank" rel="noopener">virattt/ai-hedge-fund</a></td><td>&mdash;</td></tr><tr><td><div class="agent-name">TradingGPT</div><div class="agent-meta">LLM trading loop driven by chat-style deliberation over indicator and account state.</div></td><td><a href="https://github.com/yubing744/trading-gpt" target="_blank" rel="noopener">yubing744/trading-gpt</a></td><td>&mdash;</td></tr><tr><td><div class="agent-name">DeepFund</div><div class="agent-meta">LangGraph fund: analysts fan out in parallel, then a portfolio manager sets a target position ratio and sizes the order.</div></td><td><a href="https://github.com/HKUSTDial/DeepFund" target="_blank" rel="noopener">HKUSTDial/DeepFund</a></td><td><a href="https://arxiv.org/abs/2505.11065" target="_blank" rel="noopener">arXiv:2505.11065</a></td></tr><tr><td><div class="agent-name">FinAgent</div><div class="agent-meta">Multimodal market-intelligence agent: news and price summaries feed low/high-level reflection before a tool-augmented decision.</div></td><td><a href="https://github.com/DVampire/FinAgent" target="_blank" rel="noopener">DVampire/FinAgent</a></td><td><a href="https://arxiv.org/abs/2402.18485" target="_blank" rel="noopener">arXiv:2402.18485</a></td></tr></tbody></table></div>
+<div class="foot"><a class="brand-foot" href="https://rainwangphy.github.io/lab.html" target="_blank" rel="noopener"><img src="data:image/png;base64,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" alt="" width="113" height="88" loading="lazy">DIGA@SMU</a> &middot; Generated 2026-09-03 13:34</div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const table = document.getElementById('matrix');
+  if (!table) return;
+  const thead = table.querySelector('thead');
+  const tbody = table.querySelector('tbody');
+  const headers = thead.querySelectorAll('th.sortable');
+  const filterGroup = document.getElementById('llm-filter');
+  const filterBtns = filterGroup ? Array.from(filterGroup.querySelectorAll('.filter-btn')) : [];
+  const statusEl = document.getElementById('filter-status');
+  const allRows = Array.from(tbody.querySelectorAll('tr'));
+
+  // Filter logic
+  function applyModelFilter() {
+    const allBtn = filterGroup ? filterGroup.querySelector('[data-model="all"]') : null;
+    const modelBtns = filterBtns.filter(b => b.getAttribute('data-model') !== 'all');
+    const activeModels = new Set(
+      modelBtns.filter(b => b.classList.contains('on')).map(b => b.getAttribute('data-model'))
+    );
+
+    const isAllActive = modelBtns.length > 0 && modelBtns.every(b => b.classList.contains('on'));
+    if (allBtn) {
+      allBtn.classList.toggle('on', isAllActive);
+      const chk = allBtn.querySelector('.chk');
+      if (chk) chk.textContent = isAllActive ? '✓' : '';
+    }
+
+    let visibleRank = 1;
+    let visibleCount = 0;
+
+    allRows.forEach(function(row) {
+      const m = row.getAttribute('data-model') || '';
+      const visible = activeModels.has(m);
+      if (visible) {
+        row.style.display = '';
+        const rankCell = row.querySelector('.rank-num');
+        if (rankCell) {
+          rankCell.textContent = visibleRank++;
+        }
+        visibleCount++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    if (statusEl) {
+      statusEl.textContent = visibleCount + ' / ' + allRows.length + ' agents';
+    }
+  }
+
+  // Model filter button clicks
+  filterBtns.forEach(function(btn) {
+    const model = btn.getAttribute('data-model');
+    btn.addEventListener('click', function(e) {
+      if (model === 'all') {
+        // Turn on all models
+        filterBtns.forEach(b => {
+          b.classList.add('on');
+          const chk = b.querySelector('.chk');
+          if (chk) chk.textContent = '✓';
+        });
+      } else if (e.altKey) {
+        // Alt-click to solo this model
+        filterBtns.forEach(b => {
+          const isThis = b === btn;
+          b.classList.toggle('on', isThis);
+          const chk = b.querySelector('.chk');
+          if (chk) chk.textContent = isThis ? '✓' : '';
+        });
+      } else {
+        // Toggle this model
+        const willBeOn = !btn.classList.contains('on');
+        btn.classList.toggle('on', willBeOn);
+        const chk = btn.querySelector('.chk');
+        if (chk) chk.textContent = willBeOn ? '✓' : '';
+
+        // If none selected, turn all back on
+        const anyOn = filterBtns.some(b => b.getAttribute('data-model') !== 'all' && b.classList.contains('on'));
+        if (!anyOn) {
+          filterBtns.forEach(b => {
+            b.classList.add('on');
+            const c = b.querySelector('.chk');
+            if (c) c.textContent = '✓';
+          });
+        }
+      }
+      applyModelFilter();
+    });
+
+    // Double-click to solo this model
+    if (model !== 'all') {
+      btn.addEventListener('dblclick', function(e) {
+        e.preventDefault();
+        filterBtns.forEach(b => {
+          const isThis = b === btn;
+          b.classList.toggle('on', isThis);
+          const chk = b.querySelector('.chk');
+          if (chk) chk.textContent = isThis ? '✓' : '';
+        });
+        applyModelFilter();
+      });
+    }
+  });
+
+  // Table header sorting
+  headers.forEach(function(th) {
+    th.addEventListener('click', function() {
+      const colIdx = Array.from(th.parentNode.children).indexOf(th);
+      const isCurrentlyAsc = th.classList.contains('sort-asc');
+      const isCurrentlyDesc = th.classList.contains('sort-desc');
+      const type = th.getAttribute('data-type') || 'num';
+
+      let nextAsc = false;
+      if (isCurrentlyDesc) {
+        nextAsc = true;
+      } else if (isCurrentlyAsc) {
+        nextAsc = false;
+      } else {
+        // default direction: rank column (#) or text -> ascending; performance numbers -> descending
+        nextAsc = (type === 'str' || colIdx === 0);
+      }
+
+      headers.forEach(function(h) {
+        h.classList.remove('sort-asc', 'sort-desc');
+      });
+      th.classList.add(nextAsc ? 'sort-asc' : 'sort-desc');
+
+      const rows = Array.from(tbody.querySelectorAll('tr'));
+      rows.sort(function(rowA, rowB) {
+        const cellA = rowA.children[colIdx];
+        const cellB = rowB.children[colIdx];
+        const valA = cellA ? (cellA.getAttribute('data-val') !== null ? cellA.getAttribute('data-val') : cellA.innerText.trim()) : '';
+        const valB = cellB ? (cellB.getAttribute('data-val') !== null ? cellB.getAttribute('data-val') : cellB.innerText.trim()) : '';
+
+        if (type === 'str') {
+          const res = String(valA).localeCompare(String(valB));
+          return nextAsc ? res : -res;
+        } else {
+          const numA = parseFloat(valA);
+          const numB = parseFloat(valB);
+          // Push 'not run' (-999999) to bottom in both directions
+          if (numA === -999999 && numB !== -999999) return 1;
+          if (numB === -999999 && numA !== -999999) return -1;
+          if (numA === -999999 && numB === -999999) return 0;
+
+          const validA = !isNaN(numA);
+          const validB = !isNaN(numB);
+          if (validA && validB) {
+            return nextAsc ? (numA - numB) : (numB - numA);
+          }
+          if (validA) return -1;
+          if (validB) return 1;
+          return 0;
+        }
+      });
+
+      let visibleRank = 1;
+      rows.forEach(function(row) {
+        tbody.appendChild(row);
+        if (row.style.display !== 'none') {
+          const rankCell = row.querySelector('.rank-num');
+          if (rankCell) {
+            rankCell.textContent = visibleRank++;
+          }
+        }
+      });
+    });
+  });
+
+  // Initial filter run
+  applyModelFilter();
+});
+</script></body></html>

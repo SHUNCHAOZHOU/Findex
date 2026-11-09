@@ -1,0 +1,19 @@
+{
+  "updated_at": "2026-11-09T06:49:18.621762+00:00",
+  "symbols": [
+    "AAPL",
+    "MSFT",
+    "TSLA",
+    "XOM",
+    "CVX",
+    "COP"
+  ],
+  "report": "cross-symbol Findex dashboard",
+  "agent_variants": 34,
+  "pages": 203,
+  "rsi_updates": [
+    "Codex free initial + factors",
+    "Codex buy-and-hold seed + factors",
+    "Codex buy-and-hold seed + factors + modification impact feedback"
+  ]
+}
